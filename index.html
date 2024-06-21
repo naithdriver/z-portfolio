@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z Edit Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Video Editing Portfolio</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="showcase">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hi! I'm Z, a professional video editor. Here you can find some of my recent work and get in touch with me.</p>
+        </section>
+        
+        <section id="portfolio">
+            <h2>My Work</h2>
+            <div class="portfolio-item">
+                <h3>Project Title 1</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WWjwWrAZuIE" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-item">
+                <h3>Project Title 2</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4czHi3eerwo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Add more video projects as needed -->
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-form">
+                <!-- Formspree form -->
+                <form action="https://formspree.io/f/mgvwwvvk" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <br>
+                    <input type="email" name="_replyto" placeholder="Your Email" required>
+                    <br>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <br>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Example JavaScript to handle click event
+        document.getElementById('sendEmailLink').addEventListener('click', function(event) {
+            // Optional: You can add custom behavior here before opening email client
+            console.log('Preparing to send email...');
+            // Optionally prevent the default action (opening email client) if needed
+            // event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>
