@@ -1,60 +1,259 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+/* General Reset */
+* {
+    margin: 0x;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
 }
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
 .container {
     width: 80%;
-    margin: auto;
-    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-#showcase {
+
+/* Full-width Navbar Styling */
+.full-width-navbar {
+    width: 100vw; /* Full viewport width */
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the content inside the navbar */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #007bff;
+}
+
+/* Header Animation */
+.hero-card {
     text-align: center;
-    margin: 20px 0;
-    padding: 20px;
-    background: #8f8977;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 5rem 1rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
-h1 {
-    margin: 0 0 10px;
-    padding: 0;
-    font-size: 2.5em;
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
 }
-p {
-    
-    font-size: 1.1em;
-    line-height: 1.6em;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-.portfolio-item {
-    margin: 20px 0;
+
+/* Projects Section (Centered Videos) */
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
 }
+
+#projects h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 2rem; /* Adds space between the heading and content */
+}
+
+/* You can also use this for other sections you want to center h2 in */
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 2rem;
+}
+
+/* Contact Section - Separate the paragraph */
+#contact p {
+    margin-bottom: 2rem; /* Adds space between the paragraph and the form */
+    font-size: 1.1rem;
+    color: #555; /* A slightly lighter color for the paragraph */
+    text-align: center; /* Centers the paragraph text */
+}
+
+/* Contact Form */
 .contact-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
 }
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
-.contact-form button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: #333;
-    color: #fff;
+
+.contact-form .btn {
+    padding: 0.75rem;
     border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #555;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    #projects h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form form {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
+
+/* Medium screens (tablet devices) */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    #projects h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-form form {
+        width: 80%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+}
+
+/* Larger screens (desktop) */
+@media (min-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    #projects h2 {
+        font-size: 2.5rem;
+    }
 }
